@@ -1,0 +1,108 @@
+ {% extends "index/header.html" %}
+	{% block content %}
+	{% load static %}
+	
+ 
+	<!-- Prepare Yourself -->
+
+	<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><!-- BLACK FRIDAY DEAL --></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/HcOc7P5BMi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+       
+        <br> <button class="lp"><a  href="{% url 'hc' %}">HTML and CSS</a></button><br><br><br>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading"></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/si-KFFOW2gw?list=PLVlQHNRLflP8IGz6OXwlV_lgHgc72aXlh" allowfullscreen>
+</iframe></div>
+        <!-- <div class="panel-footer">C Tutorials</div><br><br> -->
+        <br><button class="lp"><a  href="{% url 'ctutorial' %}">C Tutorial</a></button><br><br><br>
+       
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading"></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/l0qvxPPISuY?list=PLVlQHNRLflP8_DGKcMoRw-TYJJALgGu4J" allowfullscreen>
+</iframe></div>
+        <!-- <div class="panel-footer">C++ Tutorials</div><br><br> -->
+        <br><button class="lp"><a  href="{% url 'cplus' %}">C++ Tutorial</a></button><br><br><br>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/r59xYe3Vyks?list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al" allowfullscreen>
+</iframe></div>
+        <!-- <div class="panel-footer">Java Tutorials</div><br><br> -->
+        <br><button class="lp"><a  href="{% url 'java' %}">Java Tutorial</a></button><br><br><br>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/QXeEoD0pB3E?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3" allowfullscreen>
+</iframe></div>
+        <!-- <div class="panel-footer">Python Tutorials</div><br><br> -->
+        <br><button class="lp"><a  href="{% url 'python' %}">Python</a></button><br><br><br>
+      </div>
+    </div>  
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading"></div>
+        <div class="panel-body"><iframe width="350" height="187" src="https://www.youtube.com/embed/ZwZPAP2mbCA?list=PL0s3O6GgLL5fyU5FerWY5OcYEY6DFe6fK" allowfullscreen>
+</iframe></div>
+        <!-- <div class="panel-footer">Aptitude</div><br><br> -->
+        <br> <button class="lp"><a  href="{% url 'aptitude' %}">Aptitude</a></button><br><br><br>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+
+
+
+	<!-- List Of {{ title }} -->
+	<!-- </h2>
+	<main class="container">
+      <div class="row">
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+           <div class="jumbotron">
+    
+	<div>
+		{% if questions %}
+	<ul>
+	{% for q in questions %}
+	<li><h3><a href="#" >{{ q.title }}</a><br>
+	<h5 style="color:black">{{ q.desc }}</h5><br>
+	</h3></li>
+	{% endfor %}
+	</ul>
+	{% else %}
+	<p align="center">There is no query avaialable...</p>
+	{% endif %}
+</div>
+
+</div>
+           </div>
+        </div>
+      </div>
+    </main> -->
+    <!-- <button><a  href="{% url 'ctutorial' %}">C Tutorial</a></button><br><br><br>
+    <button><a  href="{% url 'java' %}">java</a></button><br><br><br> -->
+<br>
+
+
+ 	{% endblock %}

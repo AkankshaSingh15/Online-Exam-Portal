@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>C Tutorial</h1><button><a href="/theory">GO back</a></button><br><br>
+    <p1>C programming is a general-purpose, procedural, imperative computer programming language developed in 1972 by Dennis M. Ritchie at the Bell Telephone Laboratories to develop the UNIX operating system. C is the most widely used computer language. It keeps fluctuating at number one scale of popularity along with Java programming language, which is also equally popular and most widely used among modern software programmers.</p1>
+    <h2>Why to Learn C Programming?</h2>
+    <p2>C programming language is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Software Development Domain. I will list down some of the key advantages of learning C Programming:</p2>
+    <ol type="1">
+    <li>Easy to learn</li>
+    <li>Structured language</li>
+    <li>It produces efficient programs</li>
+    <li>It can handle low-level activities</li>
+    <li>It can be compiled on a variety of computer platforms</li></ol>
+    <h2>Facts about C</h2>
+    <ol type="1">
+        <li>C was invented to write an operating system called UNIX.</li>
+        <li>C is a successor of B language which was introduced around the early 1970s.</li>
+        <li>The language was formalized in 1988 by the American National Standard Institute (ANSI).</li>
+        <li>The UNIX OS was totally written in C.</li> 
+        <li>Today C is the most widely used and popular System Programming Language.</li>
+        <li>Most of the state-of-the-art software have been implemented using C.</li>
+   </ol><h2>Arrays in C</h2>
+   <p2>Arrays a kind of data structure that can store a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.
+
+Declaring Arrays
+To declare an array in C, a programmer specifies the type of the elements and the number of elements required by an array as follows −
+                                                                                                                                                                                         
+type arrayName [ arraySize ];
+This is called a single-dimensional array. The arraySize must be an integer constant greater than zero and type can be any valid C data type. For example, to declare a 10-element array called balance of type double, use this statement −
+
+double balance[10];
+Here balance is a variable array which is sufficient to hold up to 10 double numbers.
+
+Initializing Arrays
+You can initialize an array in C either one by one or using a single statement as follows −
+
+double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+The number of values between braces { } cannot be larger than the number of elements that we declare for the array between square brackets [ ].
+
+    </p2>
+    <h2>Structure in C</h2>
+    <p2>A structure is a user defined data type in C/C++. A structure creates a data type that can be used to group items of possibly different types into a single type.
+ 
+        How to create a structure?
+        ‘struct’ keyword is used to create a structure. Following is an example.
+        
+        struct address 
+        { 
+           char name[50]; 
+           char street[100]; 
+           char city[50]; 
+           char state[20]; 
+           int pin; 
+        };
+        
+        Accessing Structure Members
+        To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use the keyword struct to define variables of structure type.</p2>
+        <h2>Pointers in C</h2>
+        <p2> A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address. The general form of a pointer variable declaration is −
+
+            type *var-name;
+            Here, type is the pointer's base type; it must be a valid C data type and var-name is the name of the pointer variable.</p2>
+        <h2>NULL Pointers</h2>
+        <p2>Basically the type of data that it points to is unknown. Null refers to the value. It's essentially a pointer to nothing, and is invalid to use. A null pointer points has the value NULL which is typically 0, but in any case a memory location which is invalid to dereference.
+            Some of the most common use cases for NULL are<ol type="1">
+            <li>a) To initialize a pointer variable when that pointer variable isn’t assigned any valid memory address yet.</li>
+            <li>  b) To check for null pointer before accessing any pointer variable. By doing so, we can perform error handling in pointer related code e.g. dereference pointer variable only if it’s not NULL.</li>
+                <li> c) To pass a null pointer to a function argument when we don’t want to pass any valid memory address.</li>
+        </ol>
+            The example of <ol type="1"><li>a) is
+            
+            int * pInt = NULL;</li></ol></p2>
+            <h2>Scanf in C</h2>
+            <p2>Basically the type of data that it points to is unknown. Null refers to the value. It's essentially a pointer to nothing, and is invalid to use. A null pointer points has the value NULL which is typically 0, but in any case a memory location which is invalid to dereference.
+                Some of the most common use cases for NULL are
+                <ol type="1"><li>a) To initialize a pointer variable when that pointer variable isn’t assigned any valid memory address yet.</li> 
+                    <li> b) To check for null pointer before accessing any pointer variable. By doing so, we can perform error handling in pointer related code e.g. dereference pointer variable only if it’s not NULL.</li> 
+                        <li>  c) To pass a null pointer to a function argument when we don’t want to pass any valid memory address.</li> 
+            </ol>
+                The example of <ol type="1">a) is
+                
+                int * pInt = NULL;</ol></p2>
+
+                <a href="https://www.geeksforgeeks.org/c-programming-language/"> CLick here for Full Tutorial</a><p align="right"><button ><a href="/theory">GO back</a></button></p><br>
+
+
+
+        </body>
+</html>

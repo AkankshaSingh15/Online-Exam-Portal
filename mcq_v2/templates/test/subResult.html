@@ -1,0 +1,25 @@
+{% extends "index/header.html" %}
+{% block content %}
+{% load static %}
+
+    <main class="container animated fadeIn">
+      <div class="row">
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+           <div class="jumbotron">
+              <h1 class="h1-responsive" align="center">RESULT - 2023</h1>
+              <hr>
+              <!-- <div class="button-group"> -->
+                <p align="center">
+                    <h1 class="center">Congratulations You have Done well!</h1>
+                </p><br>
+                
+                <p align="center">Your Total Points are - {{points}}</p>
+                
+
+<!--               <p id="instruction" align="center">LogIn/SignUp before starting the test.</p> -->
+           </div>
+        </div>
+      </div>
+    </main>
+{% endblock %}

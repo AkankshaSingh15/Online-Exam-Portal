@@ -1,0 +1,120 @@
+{% extends "index/header.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ContactUsHere</title>
+</head>
+<body>
+  
+<center>
+<h1 style="color:rgb(246, 240, 240)">Send Us A Query At...</h1>
+<br>
+<h3 style="color:rgb(252, 250, 250)">Email at <b>'komalthakur@gmail.com'</b></h3> 
+</center>
+<!-- <style>
+   input::placeholder {
+    font-color:black;
+   }
+</style>  -->
+
+
+  <h2 class="text-center text-white">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-4">
+      
+    </div>
+     
+
+    <div class="col-sm-4 bg-light">
+      <div class="text-center alert alert-success">
+        {% for msg in messages %}
+        {{msg}}
+        
+        {% endfor %}
+      </div>
+      
+      
+      
+      <form action = "" method="post"> {% csrf_token %}
+        <div class="form-floating"><br>
+          <label for="name">Name</label>
+            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+            <input class="form-control" name ="name" id="name" type="text"  placeholder="Enter your name..." data-sb-validations="required" />
+           
+        </div>
+        <div class="form-floating">
+          <label for="email">Email address</label>
+            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+            <input class="form-control" name ="email" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
+            
+        </div>
+        <div class="form-floating">
+          <label for="phone">Phone Number</label>
+            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+            <input class="form-control" name ="pnumber" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
+           
+        </div>
+        <div class="form-floating">
+          <label for="message">Message</label>
+            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+            <textarea class="form-control" name ="msg"  id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
+            
+        </div>
+        <br />
+        
+        <button class="btn btn-primary text-uppercase " id="submitButton" type="submit">Send</button>
+       
+      </form>
+  
+</div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      
+    </div>
+  </div>
+ <div class ="class container">
+        {{cons}}
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                {% for c in cons %}
+                <th>{{C.name}}</th>
+                <th>{{C.Email}}</th>
+                <th>{{C.msg}}</th>
+                <th>{{C.pnumber}}</th>
+            {% endfor %}
+              </tr>
+              <tr>
+                {% for c in cons %}
+                <th>{{C.name}}</th>
+                <th>{{C.Email}}</th>
+                <th>{{C.msg}}</th>
+                <th>{{C.pnumber}}</th>
+            {% endfor %}
+            </tr>
+            <tr>
+                {% for c in cons %}
+                <th>{{C.name}}</th>
+                <th>{{C.Email}}</th>
+                <th>{{C.msg}}</th>
+                <th>{{C.pnumber}}</th>
+            {% endfor %}
+            </tr>
+        </thead>
+          </div>
+       </body>
+
+
+
+</html>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

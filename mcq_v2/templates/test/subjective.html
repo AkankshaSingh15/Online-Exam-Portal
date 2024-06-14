@@ -1,0 +1,470 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/mdb.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'assets/img/logo.png' %}">
+    <link href="{% static 'assets/css/subjective.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'assets/js/subjective.js' %}"></script>
+    
+    <!-- <script type="text/javascript">
+      window.onbeforeunload = function() {
+        window.alert("Stay on page");
+        return "Dude, are you sure you want to refresh? Think of the kittens!";
+      }
+
+    </script> -->
+    
+</head>
+
+<body class="fixed-sn animated fadeIn">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+            <a href="#" class="navbar-brand" title="MMIL website"><img src="{% static 'assets/img/logo.png' %}">
+                <p id="head">CROSS KNOWLEDGE</p>
+            </a>
+            {% if user.is_authenticated %}
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">
+                        <i class="fa fa-sign-out"></i>
+                        <span class="clearfix d-none d-sm-inline-block">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+            {% else %}
+              <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a href="/login" class="nav-link">
+                        <i class="fa fa-sign-out"></i>
+                        <span class="clearfix d-none d-sm-inline-block">Login</span>
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
+        </nav>
+    </header>
+
+
+
+{% if user.is_authenticated %}
+<main class="container-fluid">
+  <div class="row parent_row">
+     <div class="col-lg-3 col-md-3 col-12">
+        <div class="panel">
+          <div class="panel panel-body" id="border">
+             <div class="row">
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b1" onclick="showq1(true)" style="border: 1.5px solid #FF1744;
+color: #FF1744;">1</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b2" onclick="showq2(true)">2</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b3" onclick="showq3(true)">3</button>
+               </div>
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b4" onclick="showq4(true)">4</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b5" onclick="showq5(true)">5</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b6" onclick="showq6(true)">6</button>
+               </div>
+
+               <!-- <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b7" onclick="showq7(true)">7</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b8" onclick="showq8(true)">8</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b9" onclick="showq9(true)">9</button>
+               </div> -->
+
+               <!-- <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b10" onclick="showq10(true)">10</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b11" onclick="showq11(true)">11</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b12" onclick="showq12(true)">12</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b13" onclick="showq13(true)">13</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b14" onclick="showq14(true)">14</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b15" onclick="showq15(true)">15</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b16" onclick="showq16(true)">16</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b17" onclick="showq17(true)">17</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b18" onclick="showq18(true)">18</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b19" onclick="showq19(true)">19</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b20" onclick="showq20(true)">20</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b21" onclick="showq21(true)">21</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b22" onclick="showq22(true)">22</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b23" onclick="showq23(true)">23</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b24" onclick="showq24(true)">24</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b25" onclick="showq25(true)">25</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b26" onclick="showq26(true)">26</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b27" onclick="showq27(true)">27</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b28" onclick="showq28(true)">28</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b29" onclick="showq29(true)">29</button>
+               </div>
+
+               <div class="col-lg-4 col-4 col-md-6">
+                 <button type="button" id="b30" onclick="showq30(true)">30</button>
+               </div> --> 
+             </div>
+          </div>
+        </div>
+     </div>
+     <div class="col-lg-9 col-md-9 col-12">
+
+<div style="font-weight: bold; margin-left: 700px;" id="quiz-time-left"></div>
+
+<script type="text/javascript">
+  var total_sec=60*{{time}};
+  var c_min=parseInt(total_sec/60);
+  var c_sec=parseInt(total_sec%60);
+  function Checktime(){
+    document.getElementById('quiz-time-left').innerHTML='Time Left - '+c_min+' min '+c_sec+' sec';
+    if (total_sec<=0){
+      setTimeout('document.quiz.submit()',1);
+    }
+    else{
+      total_sec=total_sec-1;
+      c_min=parseInt(total_sec/60);
+      c_sec=parseInt(total_sec%60);
+      setTimeout("Checktime()",1000);
+    }
+  }
+  setTimeout("Checktime()",1000);
+
+</script>
+
+<h6 style="float: right;">Please Do not Refresh any Page while in test</h6>
+
+<form method="POST" name="quiz">{% csrf_token %}
+
+
+
+
+<!-- Qus1 -->
+
+      <div id="q1">
+
+        <div class="panel">
+          <div class="panel panel-body">
+             <h3>{{question1.title}}</h3>
+             <hr>
+              <p>{{ question1.desc|linebreaks }}</p>
+              <br>
+             <div class="form-group">
+                <input type="text" class="form-control" name = "ques1" id="ques1">
+              </div>
+              <br><br>
+               
+
+               
+             
+
+
+            <!-- <button onclick="showq2()" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></button> -->
+              <!-- <input type="button" onclick="showq2();" value="Next"> -->
+
+            <a onclick="showq2(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- Qus2 -->
+
+
+
+      <div id="q2" style="display:none;">
+
+        <div class="panel">
+          <div class="panel panel-body">
+             <h3>{{question2.title}}</h3>
+             <hr>
+             <p>{{question2.desc|linebreaks}}
+             </p><br>
+             <div class="form-group">
+                <input type="text" class="form-control" name = "ques2" id="ques2">
+              </div>
+             <br><br>
+               
+             
+
+               
+               
+            <a onclick="showq3(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<!-- Qus3  -->
+
+
+<div id="q3" style="display:none;">
+
+        <div class="panel">
+          <div class="panel panel-body">
+             <h3>{{question3.title}}</h3>
+             <hr>
+             <p>{{question3.desc|linebreaks}}
+             </p><br>
+
+             <div class="form-group">
+                <input type="text" class="form-control" name = "ques3" id="ques3">
+          
+                
+              </div><br><br>
+               
+
+               
+
+               
+              
+            <a onclick="showq4(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Qus 4 -->
+
+
+<div id="q4" style="display:none;">
+
+        <div class="panel">
+          <div class="panel panel-body">
+             <h3>{{question4.title}}</h3>
+             <hr>
+             <p>{{question4.desc|linebreaks}}
+             </p><br>
+             <div class="form-group">
+                <input type="text" class="form-control" name = "ques4" id="ques4">
+              
+                
+              </div><br><br>
+               
+             
+
+              
+
+              
+               
+            <a onclick="showq5(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Qus 5 -->
+
+
+<div id="q5" style="display:none;">
+
+        <div class="panel">
+          <div class="panel panel-body">
+             <h3>{{question5.title}}</h3>
+             <hr>
+             <p>{{question5.desc|linebreaks}}
+             </p><br>
+
+             <div class="form-group">
+                <input type="text" class="form-control" name = "ques5" id="ques5">
+              
+                
+              </div><br><br>
+               
+
+               
+
+               
+
+               
+            <a onclick="showq6(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+<!-- Qus 6 -->
+<div id="q6" style="display:none;">
+
+  <div class="panel">
+    <div class="panel panel-body">
+       <h3>{{question6.title}}</h3>
+       <hr>
+       <p>{{question6.desc|linebreaks}}
+       </p><br>
+
+       <div class="form-group">
+          <input type="text" class="form-control" name = "ques6" id="ques6">
+        
+          
+        </div><br><br>
+         
+
+         
+
+         
+
+         
+      <!-- <a onclick="showq7(false)" class="next">Next<i style="margin-left: 5px;" class="glyphicon glyphicon-chevron-right"></i></a> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+          <input type="submit" value="End Test" class="btn btn-danger end_test">
+
+
+
+
+      </form>
+      </div>
+     </div>
+  </div>
+
+    </main>
+
+
+    {% else %}
+
+
+
+
+        <main class="container animated fadeIn">
+      <div class="row">
+        <div class="col-lg-2 col-md-2"></div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+           <div class="jumbotron">
+              <h1 class="h1-responsive" align="center">OOPS !!!</h1>
+              <hr>
+              <!-- <div class="button-group"> -->
+                <p align="center">
+                    You are not Logged in. Please Login <a href="/login">Click here</a>
+                </p><br>
+
+
+<!--               <p id="instruction" align="center">LogIn/SignUp before starting the test.</p> -->
+           </div>
+        </div>
+      </div>
+    </main>
+
+
+
+    {% endif %}
+    <footer class="page-footer elegant-color center-on-small-only">
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2023 Copyright:
+                <a href="#">Thakur Innovations</a>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script type="text/javascript" src="{% static 'assets/js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/mdb.min.js' %}"></script>
+</body>
+
+</html>
